@@ -1,0 +1,20 @@
+#grid-container {
+    width: 50vw;
+    aspect-ratio: 1/1;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex: 1 1 auto;
+}
+
+.cell {
+    border: solid;
+    border-width: 1px;
+    border-color: grey;
+    flex: 1 1 auto;
+}
+

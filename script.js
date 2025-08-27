@@ -1,6 +1,7 @@
 const gridContainer = document.querySelector("#grid-container");
-console.log(gridContainer.clientWidth)
+gridContainer.addEventListener("mouseenter", e => {
 
+});
 function createGrid(squares) {
     for(let i = 0; i < squares; i++) {
         const row = document.createElement("div");

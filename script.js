@@ -9,16 +9,28 @@ function createGrid(squares) {
         for (let j = 0; j < squares; j++) {
             const cell = document.createElement("div");
             cell.classList.add("cell");
-            cell.addEventListener("mouseenter", () => {
-                cell.classList.toggle("highlighted-cell");
+            cell.style.backgroundColor = getRandomHexColor()
+            cell.style.opacity = 0.1;
+            cell.addEventListener("mouseenter", (e) => {
+                // cell.classList.toggle("highlighted-cell");
+                console.log(e.target.style.opacity + 0.1);
+                e.target.style.opacity = e.target.style.opacity + 0.1;
             });
             cell.addEventListener("mouseleave", () => {
-                cell.classList.toggle("highlighted-cell");
+                // cell.classList.toggle("highlighted-cell");
             });
             row.appendChild(cell);
         }
         gridContainer.appendChild(row)
     }
+}
+
+function getRandomHexColor() {
+  // Generate a random number between 0 and 16777215 (which is FFFFFF in hexadecimal)
+  const randomColor = Math.floor(Math.random() * 16777215);
+  let hexColor = randomColor.toString(16);
+  hexColor = hexColor.padStart(6, '0');
+  return `#${hexColor}`;
 }
 
 createGrid(16);

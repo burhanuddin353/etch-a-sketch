@@ -1,5 +1,5 @@
 #grid-container {
-    width: 50vw;
+    width: 720px;
     aspect-ratio: 1/1;
     border-style: solid;
     display: flex;
@@ -19,3 +19,6 @@
     flex: 1 1 auto;
 }
 
+.highlighted-cell {
+    background-color: yellow;
+}

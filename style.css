@@ -4,6 +4,7 @@
     border-style: solid;
     display: flex;
     flex-direction: column;
+
 }
 
 .row {
@@ -14,7 +15,7 @@
 .cell {
     border: solid;
     border-width: 1px;
-    border-color: grey;
+    border-color: lightgray;
     flex: 1 1 auto;
 }
 

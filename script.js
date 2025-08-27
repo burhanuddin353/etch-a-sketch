@@ -12,9 +12,9 @@ function createGrid(squares) {
             cell.style.backgroundColor = getRandomHexColor()
             cell.style.opacity = 0.1;
             cell.addEventListener("mouseenter", (e) => {
-                // cell.classList.toggle("highlighted-cell");
-                console.log(e.target.style.opacity + 0.1);
-                e.target.style.opacity = e.target.style.opacity + 0.1;
+                if (e.target.style.opacity < 1) {
+                    e.target.style.opacity = Number(e.target.style.opacity) + 0.1;
+                }
             });
             cell.addEventListener("mouseleave", () => {
                 // cell.classList.toggle("highlighted-cell");
